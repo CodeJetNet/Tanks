@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhl7krcmpsabn"]
+
+[ext_resource type="Script" path="res://Tank/tank.gd" id="1_0wj35"]
+[ext_resource type="Texture2D" uid="uid://bl6sxd2myv1wg" path="res://assets/Tanks/tank_model_1/tank_model_1_1_b.png" id="1_7kr0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuxme"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lrcol"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7kr0f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tank1" type="CharacterBody2D"]
+script = ExtResource("1_0wj35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fuxme")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lrcol")
