@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://csde0j4hof6cr"]
+
+[ext_resource type="Texture2D" uid="uid://m5n7giyoem4l" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/dirtLeft.png" id="1_bxoim"]
+[ext_resource type="Texture2D" uid="uid://b3wenbsbcfjor" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/dirtMid.png" id="2_swoy6"]
+[ext_resource type="Texture2D" uid="uid://rhi7o5bq5wln" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/dirtRight.png" id="3_h8imv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqqig"]
+size = Vector2(1049, 70)
+
+[node name="Platform" type="Node2D"]
+position = Vector2(45, 7)
+
+[node name="DirtLeft" type="Sprite2D" parent="."]
+position = Vector2(1, 35)
+texture = ExtResource("1_bxoim")
+
+[node name="DirtMid" type="Sprite2D" parent="."]
+position = Vector2(71, 35)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid" type="Sprite2D" parent="DirtMid"]
+position = Vector2(70, 0)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid2" type="Sprite2D" parent="."]
+position = Vector2(211, 35)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid" type="Sprite2D" parent="DirtMid2"]
+position = Vector2(70, 0)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid3" type="Sprite2D" parent="."]
+position = Vector2(351, 35)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid" type="Sprite2D" parent="DirtMid3"]
+position = Vector2(70, 0)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid4" type="Sprite2D" parent="."]
+position = Vector2(491, 35)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid" type="Sprite2D" parent="DirtMid4"]
+position = Vector2(70, 0)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid5" type="Sprite2D" parent="."]
+position = Vector2(911, 35)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid6" type="Sprite2D" parent="."]
+position = Vector2(631, 35)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid" type="Sprite2D" parent="DirtMid6"]
+position = Vector2(70, 0)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid7" type="Sprite2D" parent="."]
+position = Vector2(771, 35)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtMid" type="Sprite2D" parent="DirtMid7"]
+position = Vector2(70, 0)
+texture = ExtResource("2_swoy6")
+
+[node name="DirtRight" type="Sprite2D" parent="."]
+position = Vector2(981, 35)
+texture = ExtResource("3_h8imv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(490.5, 35)
+shape = SubResource("RectangleShape2D_lqqig")

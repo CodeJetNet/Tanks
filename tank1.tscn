@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0262ibr2hyll"]
+
+[ext_resource type="Script" path="res://tank1.gd" id="1_bxq7h"]
+[ext_resource type="Texture2D" uid="uid://b76xkjpy2ptpw" path="res://assets/Tanks/tank_model_2/tank_model_2_7_b.png" id="1_byxio"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlqym"]
+size = Vector2(106, 99)
+
+[node name="Tank" type="CharacterBody2D"]
+script = ExtResource("1_bxq7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -0.5)
+shape = SubResource("RectangleShape2D_wlqym")
+
+[node name="TankModel27B" type="Sprite2D" parent="."]
+position = Vector2(-1.52588e-05, -1.52588e-05)
+scale = Vector2(0.526667, 0.526667)
+texture = ExtResource("1_byxio")
+
+[node name="Gun" type="Marker2D" parent="."]
