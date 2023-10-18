@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcnwamu6txsi1"]
+[gd_scene load_steps=4 format=3 uid="uid://dcnwamu6txsi1"]
 
 [ext_resource type="PackedScene" uid="uid://c0262ibr2hyll" path="res://tank1.tscn" id="1_6ofe0"]
 [ext_resource type="PackedScene" uid="uid://csde0j4hof6cr" path="res://platform.tscn" id="2_4ma0l"]
+[ext_resource type="PackedScene" uid="uid://bk0j6mx8f4em6" path="res://target.tscn" id="3_bi8o7"]
 
 [node name="BattleGround" type="Node2D"]
 
 [node name="Platform" parent="." instance=ExtResource("2_4ma0l")]
-position = Vector2(95, 565)
+position = Vector2(149, 636)
 
 [node name="Tank" parent="." instance=ExtResource("1_6ofe0")]
-position = Vector2(304, 236)
+position = Vector2(1103, 604)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_bi8o7")]
+position = Vector2(194, 603)

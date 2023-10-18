@@ -1,21 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0262ibr2hyll"]
+[gd_scene load_steps=5 format=3 uid="uid://c0262ibr2hyll"]
 
 [ext_resource type="Script" path="res://tank1.gd" id="1_bxq7h"]
 [ext_resource type="Texture2D" uid="uid://b76xkjpy2ptpw" path="res://assets/Tanks/tank_model_2/tank_model_2_7_b.png" id="1_byxio"]
+[ext_resource type="Texture2D" uid="uid://ckcu72bmccdn0" path="res://assets/Tanks/tank_model_1/tank_model_1_7_w1.png" id="3_utf7t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlqym"]
 size = Vector2(106, 99)
 
 [node name="Tank" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_bxq7h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -0.5)
 shape = SubResource("RectangleShape2D_wlqym")
 
-[node name="TankModel27B" type="Sprite2D" parent="."]
-position = Vector2(-1.52588e-05, -1.52588e-05)
-scale = Vector2(0.526667, 0.526667)
+[node name="Tank" type="Sprite2D" parent="."]
 texture = ExtResource("1_byxio")
 
-[node name="Gun" type="Marker2D" parent="."]
+[node name="Gun" type="Sprite2D" parent="."]
+position = Vector2(-58, -42)
+rotation = 3.76991
+scale = Vector2(1.01333, 1.00667)
+texture = ExtResource("3_utf7t")
+
+[node name="Gun" type="Marker2D" parent="Gun"]
+position = Vector2(66.3141, 0.616164)
+
+[node name="RayCast2D" type="RayCast2D" parent="Gun/Gun"]
+visible = false
+position = Vector2(-1.59673, 1.16779)
+
+[node name="Line2D" type="Line2D" parent="Gun/Gun"]
+
+[node name="VScrollBar" type="VScrollBar" parent="."]
+offset_left = -44.0
+offset_top = -602.0
+offset_right = 106.0
+offset_bottom = -350.0
+
+[node name="HScrollBar" type="HScrollBar" parent="."]
+offset_left = -448.0
+offset_top = -540.0
+offset_right = -100.0
+offset_bottom = -404.0
